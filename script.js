@@ -1,74 +1,74 @@
+/* ------------------------------------- */
+/* Lesson 10 - Wrap and Unwrap Elements */
+/* ----------------------------------- */
 
-/* Lesson 7 Traversing the DOM with JQuery */
-
-/* next
-$('#contact-methods').next().css({border: '3px solid red'});
- */
-
-/* prev 
-$("#social-nav").prev().css({border: "3px solid blue"});
- */
-
-/* parent 
-$('.banner-title').parent().css({border: '3px solid pink'}); 
+/* $("section").wrap("<div>");
+*/
+/* $("section").unwrap();
+*/
+/* $("section").wrapAll("<div>");
 */
 
-/* childern 
-$("#social-nav").children().css({border: '3px solid green'}); 
-*/ 
-
-/* find
-$('#contact').find('.facebook').css({border: '2px solid purple'});
-*/
-
-/* closest
-$('#social-nav').closest('.wrapper').css({border: '2px solid orange'});
- */ 
-
-/* Lesson 8 - Chaining*/
 /*
-$('#contact-methods').css({border: '2px solid red'})
-    .next().css({border: '2px solid green'})
-    .closest('section').css({border: '2px solid blue'});
+wrap() - wraps all matched elements individually
+unwrap() - unwraps all matched elements
+wrapAll() - wraps all elements combined with 1 single element
 */
 
-/* Lesson 9 - Adding Content to HTML*/
 
-// SOME CODE TO PULL IN MY LATEST TWITTER TWEET
-var tweet="<div style='margin 20px 0; padding: 10px; background: #eee'>The big fight live: Ham vs Cheese!</div>";
+/* Demo */
+/*
+var wrapper="<div class='wrapper'>";
+var button= $(".button");
+var wrapped=true;
 
-/* append
-$('#tweets div').append(tweet);
+button[0].onclick=function(){
+    if (wrapped){
+        $("section").unwrap();
+        wrapped=false;
+        button.text("Wrap");
+    } else {
+        $("section").wrapAll(wrapper);
+        wrapped=true;
+        button.text("Unwrap");
+    }
+};
 */
 
-/* prepend 
-$('#tweets div').prepend(tweet);
+/* ----------------------------- */
+/* Lesson 11 - Removing Content */
+/* --------------------------- */
+
+/*
+$(".button").empty();
+$("#points-of-sale").empty();
+*/
+/*
+$(".button").remove();
+$("#contact img").remove();
 */
 
-/* before
-$('#tweets p').before(tweet);
+/*
+.empty() - empties the inner HTML of an Element
+.remove() - removes element completely
 */
 
-/*after 
-$('#tweets div').after(tweet);
+/* -------------------------------- */
+/* Lesson 12 - Changing Attributes */
+/* ------------------------------ */
+
+/*
+$("#contact img").removeAttr("alt");
+*/
+/* Set Attribute
+$("#contact img").attr("alt", "location");
+*/
+/* Read Attrubite
+console.log($("#contact img").attr("alt"));
 */
 
-/* HTML 
-$('#tweets div').html(tweet);
-*/
 
-/* text 
-var tweet="The big fight live: Ham vs Cheese!";
-$('#tweets div p').text(tweet);
-*/
-
-/* ADDING & CHANGING CONTENT
-
-.append() adds content to the bottom of the element
-.prepend() adds content to the top of the element
-.before() adds content before element
-.after() adds content after element
-.html() changes the whole html of the element
-.text() changes the text of an element
-
+/*
+.removeAttr() - removes attribute completely
+.attr() - can read or set any attribute
 */
