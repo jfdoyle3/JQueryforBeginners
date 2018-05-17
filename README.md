@@ -1,3 +1,3 @@
 # JQueryforBeginners
 
-Lessons 7,8,9
+Lessons 10,11,12
