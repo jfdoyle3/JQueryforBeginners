@@ -1,56 +1,66 @@
-/* ---------------------------- */
-/* Lesson 13 - Controlling CSS */
 /* -------------------------- */
+/* Lesson 16 - Event Helpers */
+/* ------------------------ */
 
-/*  Chaining 
-$("#social-nav").css("top","-200px").css("left", "100px");
-*/
-
-/* thru an Object
-$("#social-nav").css({
-    "top": "-400px",
-    "left": "150px",
-    "opacity": "0.5",
-    "border-top": "4px solid red"
+/*
+$("#lead-banner").on("dblclick", function(){
+    alert("You double clicked me");
+    $("#lead-banner").off("dblclick");
 });
 */
 
-/* ------------------------------- */
-/* Lesson 14 -  Adding & Removing */
-/* ----------------------------- */
-
-/* Add & Remove */
 /*
-$("header .wrapper").removeClass("wrapper");
-$("header > div").addClass("wrapper");
+on() - binds an event to matched elements(s)
+off() - unbindes event from matched element(s)
 */
 
-/* Toggle Class */
 
-var button= $("#lead-banner a");
-button[0].onclick=function(){
-    $("#points-of-sale").toggleClass("open");
-    return false;
-};
+/* ------------------------------------------- */
+/* Lesson 17 -  Document Ready vs Window Load */
+/* ----------------------------------------- */
 
-
+/* Few different methods for Doucment Ready */
 /*
-removeClass() - removes a class from the matched elements(s)
-addClass() - add a class to the matched element(s)
-toggleClass() - toggles the class on and off on their matched element(s)
+$(document).on("ready",function(){});
+*/
+/*
+$(doucment).ready(function(){});
+*/
+/*
+$(function(){});
 */
 
-/* -------------------------------- */
-/* Lesson 15 - Binding & Unbinding */
-/* ------------------------------ */
+/* Window.load */
+/*
+$(window).on("load", function(){});
+*/
+/*
+$(window).load(function(){});
+*/
 
-var myLis=$("#points-of-sale li");
-myLis.on("click", function(){
-    $(this).css({"background" : "pink"});
-    myLis.off("click");
+
+/* --------------------------------------- */
+/* Lesson 18 - The Event Object in JQuery */
+/* ------------------------------------- */
+
+/*
+$(document).ready(function(){
+    $("*").on("click", function(e){
+        console.log(e.target);
+        console.log("The evnet Type is: "+ e.type);
+        console.log("X co-ordinate of the event is: " + e.pageX);
+        console.log("Y co-ordinate of the event is: " + e.pageY);
+        e.stopPropagation();
+    });
+
 });
-
-/*
-on() - binds an event to matched elements
-off() - unbinds an event from matched elements
 */
+
+
+
+
+
+
+
+
+
