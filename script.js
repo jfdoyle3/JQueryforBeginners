@@ -1,74 +1,56 @@
-/* ------------------------------------- */
-/* Lesson 10 - Wrap and Unwrap Elements */
-/* ----------------------------------- */
+/* ---------------------------- */
+/* Lesson 13 - Controlling CSS */
+/* -------------------------- */
 
-/* $("section").wrap("<div>");
-*/
-/* $("section").unwrap();
-*/
-/* $("section").wrapAll("<div>");
+/*  Chaining 
+$("#social-nav").css("top","-200px").css("left", "100px");
 */
 
-/*
-wrap() - wraps all matched elements individually
-unwrap() - unwraps all matched elements
-wrapAll() - wraps all elements combined with 1 single element
+/* thru an Object
+$("#social-nav").css({
+    "top": "-400px",
+    "left": "150px",
+    "opacity": "0.5",
+    "border-top": "4px solid red"
+});
 */
 
-
-/* Demo */
-/*
-var wrapper="<div class='wrapper'>";
-var button= $(".button");
-var wrapped=true;
-
-button[0].onclick=function(){
-    if (wrapped){
-        $("section").unwrap();
-        wrapped=false;
-        button.text("Wrap");
-    } else {
-        $("section").wrapAll(wrapper);
-        wrapped=true;
-        button.text("Unwrap");
-    }
-};
-*/
-
+/* ------------------------------- */
+/* Lesson 14 -  Adding & Removing */
 /* ----------------------------- */
-/* Lesson 11 - Removing Content */
-/* --------------------------- */
 
+/* Add & Remove */
 /*
-$(".button").empty();
-$("#points-of-sale").empty();
-*/
-/*
-$(".button").remove();
-$("#contact img").remove();
+$("header .wrapper").removeClass("wrapper");
+$("header > div").addClass("wrapper");
 */
 
+/* Toggle Class */
+
+var button= $("#lead-banner a");
+button[0].onclick=function(){
+    $("#points-of-sale").toggleClass("open");
+    return false;
+};
+
+
 /*
-.empty() - empties the inner HTML of an Element
-.remove() - removes element completely
+removeClass() - removes a class from the matched elements(s)
+addClass() - add a class to the matched element(s)
+toggleClass() - toggles the class on and off on their matched element(s)
 */
 
 /* -------------------------------- */
-/* Lesson 12 - Changing Attributes */
+/* Lesson 15 - Binding & Unbinding */
 /* ------------------------------ */
 
-/*
-$("#contact img").removeAttr("alt");
-*/
-/* Set Attribute
-$("#contact img").attr("alt", "location");
-*/
-/* Read Attrubite
-console.log($("#contact img").attr("alt"));
-*/
-
+var myLis=$("#points-of-sale li");
+myLis.on("click", function(){
+    $(this).css({"background" : "pink"});
+    myLis.off("click");
+});
 
 /*
-.removeAttr() - removes attribute completely
-.attr() - can read or set any attribute
+on() - binds an event to matched elements
+off() - unbinds an event from matched elements
 */
