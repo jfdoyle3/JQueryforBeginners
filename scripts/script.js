@@ -29,6 +29,10 @@ Exsmples:
  Google Maps
  Traffic Updates
 
- ---------------------------------------------------------------
+ ---------------------------------------------------
+ jQuery Plugins
 
- jQuery 
+Plugins are useful
+Create your own plugins
+
+ */
