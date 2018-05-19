@@ -1,6 +1,6 @@
-/* ----------------------------- */
-/* Lesson 22 - Sliding Elements */
-/* --------------------------- */
+/* -------------------------- */
+/* Lesson 25 - Using Plugins */
+/* -------------------------*/
 /*
 $(document).ready(function(){
     $(".slide-button-up").on("click", function(){
@@ -24,9 +24,9 @@ $(document).ready(function(){
 });
 */
 
-/* ---------------------------------------------- */
-/* Lesson 23 - Animation example: 1 Quote Fader  */
-/* -------------------------------------------- */
+/* -------------------------- */
+/* Lesson 26 - What's Next?  */
+/* ------------------------ */
 
 /*
 $(document).ready(function(){
@@ -46,21 +46,3 @@ $(document).ready(function(){
     var quoteTimer= setInterval(changeQuote, 3000);
 });
  */
-
-/* --------------------------------------------------- */
-/* Lesson 24 - Animation Example 2: Sliding Animation */
-/* --------------------------------------------------*/
-
-/*
-$(document).ready(function(){
-
-    var items=$("#points-of-sale li");
-    items.on("click",function(){
-        $(this).find("p").slideToggle(500);
-    });    
-
-
-});
-*/
-
-
