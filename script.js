@@ -51,6 +51,7 @@ $(document).ready(function(){
 /* Lesson 24 - Animation Example 2: Sliding Animation */
 /* --------------------------------------------------*/
 
+/*
 $(document).ready(function(){
 
     var items=$("#points-of-sale li");
@@ -60,6 +61,6 @@ $(document).ready(function(){
 
 
 });
-
+*/
 
 
